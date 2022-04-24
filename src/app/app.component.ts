@@ -7,9 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   name: string = '';
+  date: string = '';
 
   onNameChange(event: Event) {
     const target = event.target as HTMLInputElement;
-    const parsedValue = (this.name = target);
+    this.name = target.value;
+  }
+  onDateChange(event: Event) {
+    const target = event.target as HTMLInputElement;
+    this.date = target.value;
   }
 }
