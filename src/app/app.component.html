@@ -38,4 +38,60 @@
       </div>
     </div>
   </div>
+
+  <div class="row">
+    <div class="form-group col">
+      <label for="">Payment Amount</label>
+      <input
+        class="form-control"
+        (input)="onAmountChange($event)"
+        name=""
+        id=""
+      />
+    </div>
+
+    <div class="col">
+      <label for=""><b>Payment Amount</b></label>
+      <div>
+        {{ amount | currency }}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col">
+      <label for="">Height</label>
+      <input
+        class="form-control"
+        (input)="onHeightChange($event)"
+        name=""
+        id=""
+      />
+    </div>
+
+    <div class="col">
+      <label for=""><b>Height</b></label>
+      <div>
+        {{ height | number: "1.1-2" }}
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col">
+      <label for="">Miles</label>
+      <input
+        class="form-control"
+        (input)="onMilesChange($event)"
+        name=""
+        id=""
+      />
+    </div>
+
+    <div class="col">
+      <label for=""><b>kilometers</b></label>
+      <div>
+        {{ miles | convert: "km" }}
+      </div>
+    </div>
+  </div>
 </div>

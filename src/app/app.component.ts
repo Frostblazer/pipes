@@ -8,7 +8,20 @@ import { Component } from '@angular/core';
 export class AppComponent {
   name: string = '';
   date: string = '';
+  amount: number = 0;
+  height: number = 0;
+  miles: number = 0;
 
+  car = {
+    make: 'Toyota',
+    model: 'Camry',
+    year: '2000',
+  };
+
+  onHeightChange(event: Event) {
+    const target = event.target as HTMLInputElement;
+    this.height = parseFloat(target.value);
+  }
   onNameChange(event: Event) {
     const target = event.target as HTMLInputElement;
     this.name = target.value;
@@ -16,5 +29,13 @@ export class AppComponent {
   onDateChange(event: Event) {
     const target = event.target as HTMLInputElement;
     this.date = target.value;
+  }
+  onAmountChange(event: Event) {
+    const target = event.target as HTMLInputElement;
+    this.amount = parseFloat(target.value);
+  }
+  onMilesChange(event: Event) {
+    const target = event.target as HTMLInputElement;
+    this.miles = parseFloat(target.value);
   }
 }
